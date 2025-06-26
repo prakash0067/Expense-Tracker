@@ -1,15 +1,30 @@
+# Android Studio specific
 *.iml
-.gradle
-/local.properties
+.idea/
+.gradle/
+local.properties
+
+# Ignore IDE-specific files
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# Mac OS-specific
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+
+# Build folders
+/build/
+/app/build/
+*/build/
+
+# Captures & native builds
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing keys (very important)
+/*.jks
+/*.keystore
