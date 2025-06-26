@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:paddingTop="0dp">
+
+    <!-- Top AppBar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        app:title="Add New Task"
+        android:titleTextColor="#111111"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_24" />
+
+    <!-- CardView with all Inputs -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Task"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="What are you planning?"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/taskTitleEditText"
+                    android:layout_width="match_parent"
+                    android:minLines="2"
+                    android:gravity="top|start"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Date Field with Icon -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <!-- Date Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/baseline_date_range_24"
+                    app:tint="@color/colorPrimary" />
+
+                <!-- TextInputLayout with paddingStart for icon space -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="40dp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </FrameLayout>
+
+
+            <!-- Time Field with Icon -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <!-- Time Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/baseline_access_time_24"
+                    app:tint="@color/colorPrimary" />
+
+                <!-- TextInputLayout with paddingStart -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Time"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusBottomEnd="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/timeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="40dp"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </FrameLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveTodoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Task"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:iconPadding="12dp"
+                android:backgroundTint="@color/colorPrimary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

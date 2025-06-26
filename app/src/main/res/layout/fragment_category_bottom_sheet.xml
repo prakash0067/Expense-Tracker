@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutCategoryBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet_round"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    android:paddingHorizontal="16dp">
+
+    <!-- Sheet Title -->
+    <TextView
+        android:id="@+id/titleCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Category"
+        android:textColor="#111111"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Category List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+</LinearLayout>

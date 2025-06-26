@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="1dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/light_white"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <!-- Icon for transaction -->
+        <ImageView
+            android:id="@+id/transactionIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_food"
+            android:background="@drawable/bg_icon_circle"
+            android:scaleType="centerInside"
+            android:padding="8dp" />
+
+        <!-- Transaction Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/transactionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zomato Order"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/transactionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="June 21, 2025 10:30 AM"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Transaction Amount -->
+        <TextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-₹320"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

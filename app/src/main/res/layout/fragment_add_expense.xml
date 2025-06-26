@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollAddExpense"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="4dp"
+    android:fillViewport="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeColor="#DDDDDD"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/titleAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add new expense"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subTitleAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the details of your expense to help you track your spending."
+                android:textSize="14sp"
+                android:textColor="#888888"
+                android:layout_marginBottom="24dp" />
+
+            <!-- expense title -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#296AFF"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Amount Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAmountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter Amount"
+                app:boxStrokeColor="#296AFF"
+                app:boxStrokeWidth="2dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputDescriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#296AFF"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Category Selector -->
+            <LinearLayout
+                android:id="@+id/selectCategoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_outline_gray"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/categoryIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_category_2" />
+
+                <TextView
+                    android:id="@+id/selectedCategoryText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Select Category"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_next_small" />
+            </LinearLayout>
+
+            <!-- Date Picker -->
+            <LinearLayout
+                android:id="@+id/selectDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_outline_gray"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/selectedDateText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oct 5th, 2023 10:00 AM"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_calendar" />
+            </LinearLayout>
+
+            <!-- Add Expense Button (Material Design) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Add Expense"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                app:cornerRadius="8dp"
+                app:iconPadding="8dp"
+                app:backgroundTint="#234FEB" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</ScrollView>
