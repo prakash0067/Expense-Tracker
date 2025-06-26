@@ -142,7 +142,6 @@ The following features are **partially implemented or UI-ready**:
 ## 🙋 About the Developer
 
 **Prakash Sirvi**  
-📧 [personalprakash200@gmail.com](mailto:personalprakash200@gmail.com)  
 💼 Android Developer | UI Enthusiast | Offline-first Advocate
 
 ---
