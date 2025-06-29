@@ -146,12 +146,6 @@ The following features are **partially implemented or UI-ready**:
 
 ---
 
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
 ## 🔗 GitHub Tags
 
 `#Android` `#ExpenseTracker` `#MaterialDesign` `#SQLite` `#OfflineApp` `#PersonalFinance`
