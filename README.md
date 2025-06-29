@@ -77,34 +77,7 @@
 ---
 
 ## 📂 Folder Structure
-Paisafy/
-├── activities/
-│   ├── LoginActivity.java
-│   ├── SignupActivity.java
-│   └── TransactionDetailActivity.java
-│
-├── fragments/
-│   ├── HomeFragment.java
-│   ├── WalletFragment.java
-│   └── ProfileFragment.java
-│
-├── adapters/
-│   └── TransactionAdapter.java
-│
-├── database/
-│   └── DbHelper.java
-│
-├── models/
-│   └── Transaction.java
-│
-├── utils/
-│   └── CurrencyUtil.java
-│
-├── res/
-│   ├── layout/
-│   ├── drawable/
-│   └── values/
----
+
 
 ## 💾 Database Design
 
